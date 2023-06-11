@@ -1,0 +1,47 @@
+Create user Petstore identified by admin;
+Grant dba to Petstore;
+Create table AdminLoginTable
+( 
+Admin_Username VARCHAR2(15) NOT NULL,
+Admin_Password VARCHAR2(15) NOT NULL
+);
+Insert into AdminLoginTable values ('admin', 'admin');
+Create table EmployeeLoginTable
+( 
+Employee_Username VARCHAR2(15) NOT NULL,
+Employee_Password VARCHAR2(15) NOT NULL,
+Primary key(Employee_Username)
+);
+Insert into EmployeeLoginTable values ('Dan1971', 'dan111');
+Create table Inventory
+( 
+ItemName VARCHAR(100),
+ItemType VARCHAR(30),
+ItemQuantity INT,
+ItemPrice VARCHAR(15),
+ItemCode VARCHAR(15),
+EntryDate DATE
+);
+Create table Transactions
+( 
+CCustomerName VARCHAR(100),
+CCustomerNumber INT,
+CPurchasedQuantity INT,
+CItemPrice VARCHAR(15),
+CItemCode VARCHAR(15),
+CTotal VARCHAR(15),
+CEntryDate DATE,
+Primary key(CCustomerName)
+);
+
+Create table Appointment
+( 
+ACustomerName VARCHAR(100),
+ACustomerNumber INT,
+Aservice VARCHAR(100),
+Avetname VARCHAR(100),
+Apetname VARCHAR(100),
+Apetspecies VARCHAR(100),
+AEntryDate DATE,
+Primary key(ACustomerNumber)
+);
